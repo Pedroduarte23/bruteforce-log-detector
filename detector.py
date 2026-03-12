@@ -19,7 +19,7 @@ while True:
     print(f"--- Verificação em: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')} ---")
     
     try:
-        with open(arquivo_log, "r") as arquivo:
+        with open(arquivo_log, "r", encoding="utf-8") as arquivo:
             logs = arquivo.readlines()
 
         ips = []
@@ -36,7 +36,7 @@ while True:
                 print(msg_alerta)
                 
                 # Salva no histórico sem apagar o que já existia
-                with open(arquivo_historico, "a") as hist:
+                with open(arquivo_historico, "a", encoding="utf-8") as hist:
                     horario = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                     hist.write(f"[{horario}] {msg_alerta}\n")
                     
