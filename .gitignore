@@ -3,3 +3,4 @@ alerta.txt
 __pycache__/
 .venv/
 .vscode/
+historico_ataques.txt
